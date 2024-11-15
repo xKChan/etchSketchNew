@@ -16,12 +16,15 @@ function createGrid() {
   }
 }
 
-createGrid();
+function getHovered() {
+  const getHoveredSquare = document.querySelectorAll('.col');
 
-const getHoveredSquare = document.querySelectorAll('.col');
-
-getHoveredSquare.forEach(box => {
-  box.addEventListener('mouseover', () => {
-    box.classList.add('hovered');
+  getHoveredSquare.forEach(box => {
+    box.addEventListener('mouseover', () => {
+      box.classList.add('hovered');
+    });
   });
-});
+}
+
+createGrid();
+getHovered();
